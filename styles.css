@@ -17,7 +17,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: auto;
 }
 H2{
   color: var(--txt-color);
@@ -27,7 +27,8 @@ H2{
 .wrapper {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 500px;
 }
 
 .column1, .column2 {
@@ -368,4 +369,54 @@ img{
 
 .noBTN:disabled {
   box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wrapper {
+      flex-direction: column; /* Stack elements vertically */
+      height: auto;
+      width: 90%;
+  }
+
+  .column1, .column2 {
+      flex: none;
+      width: 400px;
+      padding: 20px;
+  }
+
+  .container {
+      height: 100vh;
+      width: 100%;
+      max-width: 300px;
+      padding: 20px;
+  }
+  .heart{
+    margin-left: 135px;
+    margin-top: 60px;
+  }
+
+  img {
+      width: 150px;
+      height: auto;
+      margin-left: 90px;
+  }
+
+  button {
+      width: 100%;
+      font-size: 16px;
+      padding: 12px;
+  }
+  .yesBTN,.noBTN {
+    position: relative;
+    width: 10%;
+    margin-right: 10px;
+    align-items: center;
+    bottom: 40px;
+  }
+  .playAudio{
+    margin-left: 350px;
+    margin-bottom: 10px;
+    width: 60%;
+    top: -400px;
+  }
 }
